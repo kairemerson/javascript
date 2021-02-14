@@ -9,13 +9,15 @@
 </head>
 <body>
     <div class="container">
-        <button class="startBtn">start</button>
-        <button class="pauseBtn">pause</button>
-        <button class="stopBtn">stop</button>
+        <button onclick="start()" class="startBtn">start</button>
+        <button onclick="pause()" class="pauseBtn">pause</button>
+        <button onclick="stop()" class="stopBtn">stop</button>
         <div>
-            <h1>00:00:00</h1>
+            <h1 class="display">00:00:00</h1>
         </div>
     </div>
+
+    <script src="./js/script.js"></script>
     
 </body>
 </html>
