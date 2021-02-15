@@ -3,20 +3,28 @@ var minuto = 0
 var hora = 0
 var cron
 var delay = 1000
+var addInterval = 0
 
 function start(){
-    cron = setInterval(()=>{
-        timer()
-    },delay)
+    if(addInterval == 0){
+        cron = setInterval(()=>{
+            timer()
+        },delay)
+        addInterval = 1
+    }
 }
 
 function pause(){
     clearInterval(cron)
+    addInterval = 0
 }
 
 function stop(){
     clearInterval(cron)
-    hora, minuto, segundo = 0
+    addInterval = 0
+    hora = 0 
+    minuto = 0
+    segundo = 0
     document.querySelector(".display").innerHTML = "00 : 00 : 00"
 }
 
