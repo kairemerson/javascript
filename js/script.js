@@ -16,7 +16,8 @@ function pause(){
 
 function stop(){
     clearInterval(cron)
-    console.log("stop");
+    hora, minuto, segundo = 0
+    document.querySelector(".display").innerHTML = "00 : 00 : 00"
 }
 
 function timer(){
